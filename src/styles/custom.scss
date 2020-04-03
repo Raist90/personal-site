@@ -1,0 +1,171 @@
+/* variables */
+$purple-primary: #880e4f;
+$purple-light: #bc477b;
+$purple-dark: #560027;
+$white: #fff;
+$yellow: #bfab25;
+
+$header-font: 'Arvo', serif;
+$paragraph-font: 'Cabin', sans-serif;
+$cursive-font: 'Indie Flower', cursive;
+
+/* colors */
+.purple-bg {
+    background: $purple-primary;
+}
+
+.purple-bg-gradient {
+    background: rgb(86,0,39);
+    background: linear-gradient(0deg, rgba(86,0,39,1) 10%, rgba(188,71,123,1) 50%, rgba(86,0,39,1) 90%); 
+}
+
+.yellow-bg {
+    background: $yellow;
+}
+
+.yellow-text {
+    color: $yellow;
+}
+
+.light-text {
+    color: $white;
+}
+
+/* fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+}
+
+p, a {
+    font-family: $paragraph-font;
+}
+
+h1 {
+    font: {
+        size: 3rem;
+    }
+}
+
+.subtitle {
+    font: {
+        family: $cursive-font;
+        size: 2rem;
+    }
+}
+
+p {
+    font: {
+        size: 1.2rem;
+        weight: 400px;
+    }
+
+    letter-spacing: 1px;
+}
+
+/* menu */
+nav.m-nav {
+    height: 50px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-evenly;
+        height: inherit;
+        align-items: center;
+
+        li {
+
+            a {
+                color: #fff;
+                letter-spacing: 2.4px;
+            }
+        }
+    }
+}
+
+/* shadows and frames */
+.m-shadow {
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.black-bg {
+    background: rgba(0, 0, 0, .3);
+}
+
+/* main content */
+section.m-banner {
+    width: 100vw;
+    height: 400px;
+    position: relative;
+
+    .m-caption-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: inherit;
+        align-items: center;
+        max-width: 60%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        .m-caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 20px 0;
+            line-height: 1.4;
+
+            h1, .subtitle, p {
+                margin: 0;
+            }
+
+            div.author-img {
+                width: 70px;
+                height: 70px;
+                border: 5px solid $purple-primary;
+                border-radius: 50%;
+                background: url(../images/me.jpg)no-repeat center center;
+                background-size: cover;
+                margin-bottom: 10px;
+            }
+
+            a.m-caption-button {
+                width: 150px;
+                text-align: center;
+                color: $white;
+                padding: 10px 5px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+section.m-banner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/bologna.jpg) no-repeat center center;
+    opacity: .7;
+    background-size: cover;
+}
+
+/* mobile version */
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    /* main content */
+    section.m-banner {
+        height: 100vh;
+
+        .m-caption-wrapper {
+            max-width: 88vw;
+        }
+    }    
+  }
