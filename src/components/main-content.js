@@ -15,6 +15,18 @@ const MainContent = () => {
                     </div>
                 </div>
             </section>
+
+            <section class="m-blog-section purple-bg">
+                <div class="m-blog-wrapper m-shadow">
+                    <article class="m-featured">
+                        <h2>Titolo articolo</h2>
+                        <p class="subtitle yellow-text">Sottotitolo</p>
+                        <p>
+                            Nulla amet do nulla et amet reprehenderit. Do et occaecat nisi anim eiusmod excepteur aliqua minim. Sit aliqua nulla sunt dolor duis fugiat occaecat culpa eiusmod duis ut aute ullamco. Sit ut duis eiusmod commodo. Deserunt Lorem occaecat enim deserunt tempor nulla proident enim sunt.
+                        </p>
+                    </article>
+                </div>
+            </section>
         </main>
     )
 }

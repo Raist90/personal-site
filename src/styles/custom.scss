@@ -155,7 +155,28 @@ section.m-banner::after {
     background: url(../images/bologna.jpg) no-repeat center center;
     opacity: .7;
     background-size: cover;
+    background-attachment: fixed;
 }
+
+/* blog section */
+section.m-blog-section {
+    padding: 50px 0;
+}
+
+    .m-blog-wrapper {
+        max-width: 60%;
+        margin: 0 auto;
+        background: $white;
+        padding: 50px;
+
+        article {
+            line-height: 1.4;
+
+            h2, .subtitle, article {
+                margin: 0;
+            }
+        }
+    }
 
 /* mobile version */
 @media (min-width: 320px) and (max-width: 480px) {
