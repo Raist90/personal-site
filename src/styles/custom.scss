@@ -173,6 +173,10 @@ section.m-blog-section {
         article {
             line-height: 1.4;
 
+            .m-featured-img {
+                margin: 0 0 20px;
+            }
+
             h1, .subtitle, article {
                 margin: 0;
             }

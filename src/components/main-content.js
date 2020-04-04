@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import BadalonaBeach from '../images/badalona beach.jpg'
 
 const MainContent = () => {
     return (
@@ -19,6 +20,9 @@ const MainContent = () => {
             <section class="m-blog-section purple-bg">
                 <div class="m-blog-wrapper m-shadow">
                     <article class="m-featured">
+                        <div class="m-featured-img">
+                            <img src={ BadalonaBeach } class="img-fluid" alt="badalona beach" />
+                        </div>
                         <h1>Titolo articolo</h1>
                         <p class="subtitle yellow-text">Sottotitolo</p>
                         <p>
