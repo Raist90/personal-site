@@ -172,7 +172,7 @@ section.m-blog-section {
         article {
             line-height: 1.4;
 
-            h2, .subtitle, article {
+            h1, .subtitle, article {
                 margin: 0;
             }
         }
@@ -188,5 +188,13 @@ section.m-blog-section {
         .m-caption-wrapper {
             max-width: 88vw;
         }
-    }    
+    }   
+    
+    /* blog section */
+    section.m-blog-section {
+
+        .m-blog-wrapper {
+            max-width: 88vw;
+        }
+    }
   }
