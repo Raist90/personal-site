@@ -98,7 +98,7 @@ nav.m-nav {
 /* main content */
 section.m-banner {
     width: 100vw;
-    height: 400px;
+    height: 450px;
     position: relative;
 
     .m-caption-wrapper {
@@ -115,7 +115,7 @@ section.m-banner {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            padding: 20px 0;
+            padding: 20px;
             line-height: 1.4;
 
             h1, .subtitle, p {
@@ -161,6 +161,7 @@ section.m-banner::after {
 /* blog section */
 section.m-blog-section {
     padding: 50px 0;
+    width: 100vw;
 }
 
     .m-blog-wrapper {
