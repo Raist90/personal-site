@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from "gatsby-image"
+import Header from '../components/header'
+import '../styles/custom.scss'
 
 const Template = ({ data }) => {
 	const title = data.markdownRemark.frontmatter.title;
@@ -10,13 +12,25 @@ const Template = ({ data }) => {
 
 	return (
 		<div>
-            <div>
-            <Img fluid={featuredImg} />
-            </div>
-			<h1>{title}</h1>
-            <p>{date}</p>
-			<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+			<Header />
+
+			<main>
+				<section className="m-blog-section purple-bg">
+					<div className="m-blog-wrapper m-shadow">
+						<article className="m-featured">
+							<div className="m-featured-img">
+								<Img fluid={featuredImg} />
+							</div>
+
+							<h2>{title}</h2>
+							<p>{date}</p>
+							<div dangerouslySetInnerHTML={{ __html: html }} />
+						</article>
+					</div>
+            </section>
+			</main>
 		</div>
+		
 	);
 };
 
