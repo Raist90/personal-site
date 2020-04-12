@@ -1,6 +1,6 @@
 ---
 path: '/second-post'
-date: '2020-03-06'
+date: '2020-03-12'
 title: 'Hello 2'
 excerpt: 'Hello World with Gatsby and React'
 featuredImage: ../images/cat.jpg

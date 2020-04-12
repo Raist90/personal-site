@@ -17,15 +17,13 @@ const IndexPage = ({ data }) => {
 							<div className="m-blog-wrapper m-shadow">
 								<article className="m-featured">
 									<div className="m-featured-img">
-										<p><Img fluid={frontmatter.featuredImage.childImageSharp.fluid} /></p>
-										<h2><Link to={frontmatter.path}>{frontmatter.title}</Link></h2>
-										&nbsp;
-										<small>
-											{' '}
-											<em>published on</em> {frontmatter.date}
-										</small>
+										<Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+										<h2>{frontmatter.title}</h2>
+										<p class="subtitle yellow-text">
+											<em>Pubblicato il</em> {frontmatter.date}
+										</p>
 										<p>{frontmatter.excerpt}</p>
-										<br />
+										<Link to={frontmatter.path} className="m-main-button purple-bg">Continua</Link>
 									</div>
 								</article>
 							</div>

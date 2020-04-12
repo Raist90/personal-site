@@ -11,7 +11,7 @@ const MainContent = () => {
                     <h1>Manuel De Toma</h1>
                     <p className="subtitle yellow-text">Fullstack Web Developer</p>
                     <p>Cupidatat velit in nostrud sint ad id quis. Anim do consequat occaecat magna cillum occaecat ullamco id est. Officia deserunt elit nulla qui esse in esse.</p>
-                    <Link to="#" className="m-caption-button purple-bg">Contattami</Link>
+                    <Link to="#" className="m-main-button purple-bg">Contattami</Link>
                 </div>
             </div>
         </section>
