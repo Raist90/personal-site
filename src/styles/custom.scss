@@ -95,6 +95,14 @@ nav.m-nav {
     }
 }
 
+/* sticky class */
+.m-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
 /* shadows and frames */
 .m-shadow {
     box-shadow: 0 8px 6px -6px black;

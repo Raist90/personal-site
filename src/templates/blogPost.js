@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from "gatsby-image"
 import Header from '../components/header'
+import Menu from '../components/menu'
 import '../styles/custom.scss'
 
 const Template = ({ data }) => {
@@ -13,6 +14,8 @@ const Template = ({ data }) => {
 	return (
 		<div>
 			<Header />
+
+			<Menu />
 
 			<main>
 				<section className="m-blog-section purple-bg">
@@ -27,7 +30,7 @@ const Template = ({ data }) => {
 							<div dangerouslySetInnerHTML={{ __html: html }} />
 						</article>
 					</div>
-            </section>
+            	</section>
 			</main>
 		</div>
 		
@@ -45,7 +48,7 @@ export const postQuery = graphql`
                 excerpt
                 featuredImage {
                     childImageSharp {
-                      fluid(maxWidth: 800) {
+                      fluid(maxWidth: 1920) {
                         ...GatsbyImageSharpFluid
                       }
                     }
