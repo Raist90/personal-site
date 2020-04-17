@@ -58,7 +58,13 @@ h2 {
 .subtitle {
     font: {
         family: $cursive-font;
-        size: 2rem;
+        size: 1.4rem;
+    }
+
+    vertical-align: middle;
+
+    em {
+        color: #212529;
     }
 }
 

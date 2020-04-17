@@ -2,7 +2,7 @@
 path: '/first-post'
 date: '2020-03-06'
 title: 'Hello World'
-excerpt: 'Hello World with Gatsby and React'
+excerpt: 'Adipisicing eu in culpa excepteur eu exercitation non id. Officia do sunt dolore eu ut voluptate adipisicing amet quis dolore laboris Lorem incididunt.'
 featuredImage: ../images/badalona beach.jpg
 ---
 
