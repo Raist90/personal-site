@@ -18,13 +18,13 @@ const IndexPage = ({ data }) => {
 								<article className="m-featured">
 									<div className="m-featured-img">
 										<Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+									</div>
 										<h2>{frontmatter.title}</h2>
 										<p class="subtitle yellow-text">
 											<em>Pubblicato il</em> {frontmatter.date}
 										</p>
 										<p>{frontmatter.excerpt}</p>
 										<Link to={frontmatter.path} className="m-main-button purple-bg">Continua</Link>
-									</div>
 								</article>
 							</div>
 						</section>
@@ -44,7 +44,7 @@ export const query = graphql`
 					id
 					frontmatter {
 						title
-						date(formatString: "MMMM DD, YYYY")
+						date(formatString: "DD MMMM, YYYY", locale: "it")
                         path
 						excerpt
 						featuredImage {

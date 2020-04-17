@@ -43,7 +43,7 @@ export const postQuery = graphql`
 			html
 			frontmatter {
 				title
-				date(formatString: "MMMM, DD, YYYY")
+				date(formatString: "DD MMMM, YYYY", locale: "it" )
 				path
                 excerpt
                 featuredImage {
