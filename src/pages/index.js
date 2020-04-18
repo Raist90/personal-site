@@ -9,11 +9,11 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
-			<div>
+			<div class="m-blog-container purple-bg">
 				{edges.map(edge => {
 					const { frontmatter } = edge.node;
 					return (
-						<section className="m-blog-section purple-bg" key={frontmatter.path}>
+						<section className="m-blog-section" key={frontmatter.path}>
 							<div className="m-blog-wrapper m-shadow">
 								<article className="m-featured">
 									<div className="m-featured-img">
