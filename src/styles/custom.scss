@@ -235,6 +235,10 @@ section.m-banner::after {
             max-width: 88vw;
         }
     }   
+
+        section.m-banner::after {
+            background-attachment: initial;
+        }
     
     /* blog section */
     .m-blog-container {
