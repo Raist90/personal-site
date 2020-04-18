@@ -22,6 +22,11 @@ $cursive-font: 'Indie Flower', cursive;
     background: linear-gradient(0deg, rgba(74,0,114,1) 10%, rgba(174,82,212,1) 50%, rgba(74,0,114,1) 90%); 
 }
 
+.purple-gradient {
+    background: rgb(206,147,216);
+    background: linear-gradient(360deg, rgba(206,147,216,1) 33%, rgba(171,71,188,1) 66%, rgba(142,36,170,1) 100%);
+}
+
 .yellow-bg {
     background: $yellow;
 }
@@ -209,8 +214,12 @@ section.m-banner::after {
                     margin: 0 0 10px;
                 }
 
-                h2, small, .subtitle, p {
-                    margin: 0;
+                h2, p, span {
+                    margin-bottom: 12px;
+                }
+
+                span {
+                    margin-right: 5px;
                 }
             }
         }

@@ -26,7 +26,7 @@ const Template = ({ data }) => {
 							</div>
 
 							<h2>{title}</h2>
-							<p>{date}</p>
+							<p className="subtitle yellow-text"><em>Pubblicato il</em> {date}</p>
 							<div dangerouslySetInnerHTML={{ __html: html }} />
 						</article>
 					</div>

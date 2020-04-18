@@ -11,6 +11,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        plugins: [
+          `gatsby-remark-reading-time`,
+          // ...
+        ],
+      },
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },

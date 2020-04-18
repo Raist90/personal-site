@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
-			<div class="m-blog-container purple-bg">
+			<div class="m-blog-container purple-gradient">
 				{edges.map(edge => {
 					const { frontmatter } = edge.node;
 					return (
@@ -20,11 +20,18 @@ const IndexPage = ({ data }) => {
 										<Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
 									</div>
 									<div className="article-text">
+									{frontmatter.tags.map((tag, i) => [
+											<span className="badge badge-pill badge-info" key={i}>
+												{tag}
+												{i < frontmatter.tags.length} 
+										  	</span>
+										])}
 										<h2>{frontmatter.title}</h2>
-											<p className="subtitle yellow-text">
-												<em> Pubblicato il</em> {frontmatter.date}
-											</p>
+										<p className="subtitle yellow-text">
+											<em> Pubblicato il</em> {frontmatter.date}
+										</p>
 										<p>{frontmatter.excerpt}</p>
+										<p><small>Tempo di lettura stimato: {edge.node.timeToRead} min.</small></p>
 										<Link to={frontmatter.path} className="m-main-button purple-bg">Continua</Link>
 									</div>
 								</article>
@@ -39,7 +46,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
 	query HomePageQuery {
-		allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+		allMarkdownRemark(limit: 4, sort: { order: DESC, fields: frontmatter___date }) {
 			totalCount
 			edges {
 				node {
@@ -47,7 +54,8 @@ export const query = graphql`
 					frontmatter {
 						title
 						date(formatString: "DD MMMM, YYYY", locale: "it")
-                        path
+						path
+						tags
 						excerpt
 						featuredImage {
 							childImageSharp {
@@ -57,6 +65,7 @@ export const query = graphql`
 							}
 						  }
 					}
+					timeToRead
 				}
 			}
 		}
