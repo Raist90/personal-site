@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
 									</div>
 									<div className="article-text">
 									{frontmatter.tags.map((tag, i) => [
-											<span className="badge badge-pill badge-info" key={i}>
+											<span className="badge badge-pill purple-bg" key={i}>
 												{tag}
 												{i < frontmatter.tags.length} 
 										  	</span>

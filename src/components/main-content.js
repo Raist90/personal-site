@@ -6,7 +6,7 @@ const MainContent = () => {
     return (
         <section className="m-banner purple-bg-gradient light-text">
             <div className="m-caption-wrapper">
-                <div className="m-caption">
+                <div className="m-caption dark-bg">
                     <div className="author-img m-shadow"></div>
                     <h1>Manuel De Toma</h1>
                     <p className="subtitle yellow-text">Fullstack Web Developer</p>

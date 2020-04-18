@@ -27,6 +27,11 @@ $cursive-font: 'Indie Flower', cursive;
     background: linear-gradient(360deg, rgba(206,147,216,1) 33%, rgba(171,71,188,1) 66%, rgba(142,36,170,1) 100%);
 }
 
+.dark-bg {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 7px;
+}
+
 .yellow-bg {
     background: $yellow;
 }
@@ -220,6 +225,7 @@ section.m-banner::after {
 
                 span {
                     margin-right: 5px;
+                    color: #fff;
                 }
             }
         }
