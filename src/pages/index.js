@@ -17,22 +17,23 @@ const IndexPage = ({ data }) => {
 							<div className="m-blog-wrapper m-shadow">
 								<article className="m-featured">
 									<div className="m-featured-img">
-										<Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+										<Link to={frontmatter.path}>
+											<Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+										</Link>
 									</div>
 									<div className="article-text">
-									{frontmatter.tags.map((tag, i) => [
-											<span className="badge badge-pill purple-bg" key={i}>
-												{tag}
-												{i < frontmatter.tags.length} 
-										  	</span>
-										])}
-										<h2>{frontmatter.title}</h2>
 										<p className="subtitle yellow-text">
 											<em> Pubblicato il</em> {frontmatter.date}
 										</p>
+										<h2>{frontmatter.title}</h2>
 										<p>{frontmatter.excerpt}</p>
 										<p><small>Tempo di lettura stimato: {edge.node.timeToRead} min.</small></p>
-										<Link to={frontmatter.path} className="m-main-button purple-bg">Continua</Link>
+										{frontmatter.tags.map((tag, i) => [
+											<span className="badge badge-pill purple-bg" key={i}>
+												{tag}
+												{i < frontmatter.tags.length} 
+											</span>
+										])}
 									</div>
 								</article>
 							</div>
